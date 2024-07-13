@@ -1,0 +1,150 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  background-repeat: no-repeat;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.btn {
+  color: white;
+  background: rgba(139, 136, 136, 0.397);
+  cursor: pointer;
+  border: 2px white solid;
+  text-align: center;
+  transition: 200ms all ease;
+}
+.btn:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 5px 5px 5px #221f1fad;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  top: 1rem;
+  z-index: 10;
+}
+.reset {
+  font-size: 1.7rem;
+  width: 12rem;
+  padding: 0.5rem 0.5rem;
+}
+
+/* CARDS */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem 0rem;
+  position: relative;
+  z-index: 1;
+}
+.card-container :first-child {
+  margin-bottom: 3rem;
+}
+.card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  border: 2px #e0d7d7a3 solid;
+  border-radius: 10px;
+  padding: 2rem 1rem;
+  width: 17rem;
+  height: 25rem;
+  background: #94909080;
+  transition: 100ms all ease;
+}
+.selected {
+  background: #e0d7d7bb;
+}
+.winner {
+  color: #c02352;
+  background-color: rgb(36, 34, 34);
+  border: #c02352;
+}
+
+.card .score {
+  font-size: 3rem;
+}
+.card .current {
+  font-size: 1.6rem;
+  background-color: #c02352;
+  color: white;
+  padding: 0.5rem 1.5rem;
+}
+.card .current p {
+  margin-bottom: 0;
+}
+/* FOOTER */
+.footer {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-top: 2px white solid;
+  background: rgba(41, 40, 40, 0.397);
+  z-index: 10;
+}
+.footer-txt {
+  font-size: 1.4rem;
+  font-weight: 700;
+  width: 9rem;
+  padding: 0.5rem 0rem;
+}
+.dice-container {
+  transform: translateY(-3rem);
+}
+
+.dice {
+  width: 5rem;
+  height: 5rem;
+  border: 2px black solid;
+  display: none;
+}
+.dice-show {
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  header {
+    top: 4rem;
+  }
+  .card-container {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100vh;
+    padding: 0rem;
+    top: -3rem;
+  }
+  .card-container :first-child {
+    margin-bottom: 0rem;
+  }
+  .footer {
+    justify-content: space-around;
+  }
+  .footer-txt {
+    width: 10rem;
+  }
+  .dice-container {
+    transform: translateY(0rem);
+  }
+}
